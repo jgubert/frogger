@@ -399,7 +399,7 @@ def nextLevel(chegaram,enemys,plataforms,frog,game):
 
 
 trilha_sound.play(-1)
-text_info = menu_font.render(('Aperte qualquer tecla para iniciar!'),1,(0,0,0))
+text_info = menu_font.render(('Press any button to start!'),1,(0,0,0))
 gameInit = 0
 
 while gameInit == 0:
@@ -410,7 +410,7 @@ while gameInit == 0:
             gameInit = 1
 
     screen.blit(background, (0, 0))
-    screen.blit(text_info,(20,150))
+    screen.blit(text_info,(80,150))
     pygame.display.update()
 
 while True:
@@ -463,8 +463,8 @@ while True:
 
         nextLevel(chegaram,enemys,plataforms,frog,game)
 
-        text_info1 = info_font.render(('Fase: {0}               Pontos: {1}'.format(game.level,game.points)),1,(255,255,255))
-        text_info2 = info_font.render(('Tempo: {0}           Vidas: {1}'.format(game.time,frog.lives)),1,(255,255,255))
+        text_info1 = info_font.render(('Level: {0}               Points: {1}'.format(game.level,game.points)),1,(255,255,255))
+        text_info2 = info_font.render(('Time: {0}           Lifes: {1}'.format(game.time,frog.lives)),1,(255,255,255))
         screen.blit(background, (0, 0))
         screen.blit(text_info1,(10,520))
         screen.blit(text_info2,(250,520))
